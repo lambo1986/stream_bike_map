@@ -1,4 +1,5 @@
 class Api::V1::TripsController < ApplicationController
+
   def create
     user = User.find_by(id: params[:trip][:user_id])
     trip = user.trips.build(trip_params)
