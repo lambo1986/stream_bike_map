@@ -11,7 +11,7 @@ RSpec.describe "trip endpoints", type: :request do
         trip: {
           start_location: "10, 10",
           end_location: "11, 13",
-          trip_duration: 10200,
+          trip_duration: "10200",
           time_of_trip: Time.now,
           user_id: @user.id
         }
@@ -31,7 +31,7 @@ RSpec.describe "trip endpoints", type: :request do
         trip: {
           start_location: "",
           end_location: "",
-          trip_duration: 12,
+          trip_duration: "12",
           time_of_trip: Time.now,
           user_id: @user.id
         }
