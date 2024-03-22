@@ -15,7 +15,7 @@ RSpec.describe "user endpoints", type: :request do
 
       json_response = JSON.parse(response.body)
 
-      expect(json_response["first_name"]).to eq("John")
+      expect(json_response["data"]["attributes"]["first_name"]).to eq("John")
       expect(User.last.email).to eq("whatever@whatever.net")
     end
 

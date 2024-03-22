@@ -1,10 +1,10 @@
 class Api::V1::UsersController < ApplicationController
   def create
-    customer = User.new(user_params)
-    if customer.save
-      render json: customer, status: :created
+    user = User.new(user_params)
+    if user.save
+      render json: UserSerializer.new(user).serializable_hash, status: :created
     else
-      render json: customer.errors, status: :unprocessable_entity
+      render json: user.errors, status: :unprocessable_entity
     end
   end
 
